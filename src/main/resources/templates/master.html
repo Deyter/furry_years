@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xml:lang="en" lang="en">
+
+<head th:fragment="site-head">
+    <link rel="stylesheet" href="css/master.css" th:href="@{/css/master.css}" />
+    <link rel="icon" href="images/favicon.ico" th:href="@{/images/favicon.ico}" />
+    <title>Furry years</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <base href="/" />
+    <meta th:include="this :: head" th:remove="tag"/>
+</head>
+<body>
+
+<header th:fragment="site-header">
+<div id="header">
+    <div id="logo">
+        <img src="/images/furry_logo2.png" />
+    </div>
+
+    <div id="menu">
+        <a th:href="@{/index}">Home</a>
+        <a th:href="@{/calculate}">Calculate</a>
+        <a th:href="@{/about_us}">About us</a>
+        <a th:href="@{/contact}">Contact</a>
+    </div>
+</div>
+</header>
+
+<footer th:fragment="site-footer">
+<div id="footer">
+    <p>Created with <a href="https://spring.io/">Spring boot</a>.</p>
+    <p align="right">Powered by TigerSoft.</p>
+</div>
+</footer>
+
+</body>
+</html>
